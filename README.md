@@ -1,2 +1,2 @@
 # 3-Problems
-Python problems for Introductory Programming - Assignment 1
+Python problems for Introductory Programming - Assignment 1.
