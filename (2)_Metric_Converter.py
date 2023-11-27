@@ -1,4 +1,3 @@
-import time
 
 def menu():
     
@@ -59,7 +58,7 @@ def feet():
         feetValue = float(feetValue)
     except:
         print ("Please enter a numeric value")
-        miles()
+        feet()
 
     feetValue = float(feetValue)
     cmValue = (feetValue * 30.48)
@@ -68,7 +67,7 @@ def feet():
     cmValue = str(cmValue)
 
     print (feetValue + " feet is " + cmValue + " in centimeters.")
-    miles()   
+    feet()   
 
 def yards():
     
@@ -83,7 +82,7 @@ def yards():
         yardsValue = float(yardsValue)
     except:
         print ("Please enter a numeric value")
-        miles()
+        yards()
 
     yardsValue = float(yardsValue)
     mValue = (yardsValue * 0.9144)
@@ -92,7 +91,7 @@ def yards():
     mValue = str(mValue)
 
     print (yardsValue + " yards is " + mValue + " in meters.")
-    miles()   
+    yards()   
 
 def inches():
     
@@ -107,16 +106,16 @@ def inches():
         inchValue = float(inchValue)
     except:
         print ("Please enter a numeric value")
-        miles()
+        inches()
 
     inchValue = float(inchValue)
     cmValue = (inchValue * 1.6)
     
     inchValue = str(inchValue)
-    cmValue = str(kiloValue)
+    cmValue = str(cmValue)
 
     print (inchValue + " inches is " + cmValue + " in centimeters.")
-    miles()
+    inches()
 
 
 print ("Welcome to the imperial to metric unit converter!")
