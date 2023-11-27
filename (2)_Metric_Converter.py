@@ -43,13 +43,13 @@ def miles():
     milesValue = str(milesValue)
     kiloValue = str(kiloValue)
 
-    print (milesValue + " miles is " + kiloValue + " in Kilometers!")
+    print (milesValue + " miles is " + kiloValue + " in Kilometers.")
     miles()   
 
 def feet():
     
     print ("enter 0 to exit to the menu")
-    print ("Please enter a value (in miles)")
+    print ("Please enter a value (in feet)")
     feetValue = input (">")
 
     if feetValue == "0":
@@ -67,11 +67,32 @@ def feet():
     feetValue = str(feetValue)
     cmValue = str(cmValue)
 
-    print (feetValue + " feet is " + cmValue + " in centimeters!")
+    print (feetValue + " feet is " + cmValue + " in centimeters.")
     miles()   
 
 def yards():
-    print
+    
+    print ("enter 0 to exit to the menu")
+    print ("Please enter a value (in yards)")
+    yardsValue = input (">")
+
+    if yardsValue == "0":
+        menu()
+
+    try:
+        yardsValue = float(yardsValue)
+    except:
+        print ("Please enter a numeric value")
+        miles()
+
+    yardsValue = float(yardsValue)
+    mValue = (yardsValue * 0.9144)
+    
+    yardsValue = str(yardsValue)
+    mValue = str(mValue)
+
+    print (yardsValue + " yards is " + mValue + " in meters.")
+    miles()   
 
 def inches():
     print
