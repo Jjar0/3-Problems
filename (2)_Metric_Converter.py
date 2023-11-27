@@ -20,6 +20,7 @@ def menu():
         inches()
     else:
         print ("Please enter one of the numbers listed above")
+        menu()
     
 def miles():
     
@@ -38,17 +39,42 @@ def miles():
 
     milesValue = float(milesValue)
     kiloValue = (milesValue * 1.6)
+    
+    milesValue = str(milesValue)
+    kiloValue = str(kiloValue)
+
     print (milesValue + " miles is " + kiloValue + " in Kilometers!")
     miles()   
 
 def feet():
     
+    print ("enter 0 to exit to the menu")
+    print ("Please enter a value (in miles)")
+    feetValue = input (">")
+
+    if feetValue == "0":
+        menu()
+
+    try:
+        feetValue = float(feetValue)
+    except:
+        print ("Please enter a numeric value")
+        miles()
+
+    feetValue = float(feetValue)
+    cmValue = (feetValue * 30.48)
+    
+    feetValue = str(feetValue)
+    cmValue = str(cmValue)
+
+    print (feetValue + " feet is " + cmValue + " in centimeters!")
+    miles()   
 
 def yards():
-    
+    print
 
 def inches():
-
+    print
 
 
 print ("Welcome to the imperial to metric unit converter!")
