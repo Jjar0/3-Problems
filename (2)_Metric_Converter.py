@@ -95,7 +95,28 @@ def yards():
     miles()   
 
 def inches():
-    print
+    
+    print ("enter 0 to exit to the menu")
+    print ("Please enter a value (in inches)")
+    inchValue = input (">")
+
+    if inchValue == "0":
+        menu()
+
+    try:
+        inchValue = float(inchValue)
+    except:
+        print ("Please enter a numeric value")
+        miles()
+
+    inchValue = float(inchValue)
+    cmValue = (inchValue * 1.6)
+    
+    inchValue = str(inchValue)
+    cmValue = str(kiloValue)
+
+    print (inchValue + " inches is " + cmValue + " in centimeters.")
+    miles()
 
 
 print ("Welcome to the imperial to metric unit converter!")
