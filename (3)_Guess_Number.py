@@ -51,5 +51,4 @@ def game(goal):
 print ("Welcome to the number guessing game,")
 print ("A random number has been generated and you must guess the number,")
 print ("The number is between 1-100,")
-print ("The fewer guesses you use, the higher your score will be.")
 main()
