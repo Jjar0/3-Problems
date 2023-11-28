@@ -109,7 +109,7 @@ def inches():
         inches()
 
     inchValue = float(inchValue)
-    cmValue = (inchValue * 1.6)
+    cmValue = (inchValue * 2.54)
     
     inchValue = str(inchValue)
     cmValue = str(cmValue)
