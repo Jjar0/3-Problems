@@ -1,7 +1,7 @@
 import random
 
 def main():
-    goal = random.randint(1,100)
+    goal = random.randint(1,100) #creating random number between 1-100.
 
     start = input ("enter 'start' to begin a new game.\n>")
 
@@ -15,15 +15,15 @@ def game(goal):
     counter = 0
     guess = ""
 
-    while guess != goal:
+    while guess != goal: #game is contained in loop to iterate the guess counter.
 
-        counter = counter + 1
+        counter = counter + 1 #iterate guess counter every faliure.
 
         print ("Guess the number!")
 
         while True:
             try:
-                guess = int(input(">"))
+                guess = int(input(">")) #inpout validation for digits.
                 break
             except:
                 print ("please enter a number!")
@@ -32,7 +32,7 @@ def game(goal):
         guess = int(guess)
 
         if guess > goal:
-            print ("lower!")
+            print ("lower!") #tells user if they need to guess higher/lower.
             continue
 
         if guess < goal:
@@ -43,7 +43,7 @@ def game(goal):
     attempts = str(counter)
 
     print ("\nCorrect!")
-    print ("The number was " + answer)
+    print ("The number was " + answer) #tell player how many guesses it took to win.
     print ("it took you "+attempts+" guesses to win.\n")
     main()
 
