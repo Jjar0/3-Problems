@@ -14,7 +14,7 @@ def menu():
     metric = ""
 
     if menuSelection == "1":
-        conversionRate = 1.6
+        conversionRate = 1.6 #conversion rate and measurements are stored in variables for later use.
         imperial = "miles"
         metric = "kilometers"
         convert(conversionRate,imperial,metric)
@@ -38,32 +38,32 @@ def menu():
         convert(conversionRate,imperial,metric)
         
     else:
-        print ("Please enter one of the numbers listed above")
+        print ("Please enter one of the numbers listed above") #basic validation.
         menu()
     
-def convert(conversionRate,imperial,metric):
+def convert(conversionRate,imperial,metric): #function is used to loop converter.
 
     conversionRate = float(conversionRate)
     
     print ("enter 0 to exit to the menu")
-    print ("Please enter a value in " + imperial)
+    print ("Please enter a value in " + imperial) 
     inp = input (">")
 
     if inp == "0":
         menu()
 
     try:
-        inp = float(inp)
+        inp = float(inp) #validation for user input as a float value
     except:
         print ("Please enter a numeric value")
         convert(conversionRate,imperial,metric)
 
     inp = float(inp)
-    out = (inp * conversionRate)
+    out = (inp * conversionRate) #calculation 
     
     inp = str(inp)
     out = str(out)
-
+    #imperial/metric strings are used so output message defines which numbers are which measurements
     print (inp + " " + imperial + " is " + out + " in " + metric + ".")
     convert(conversionRate,imperial,metric)  
 
