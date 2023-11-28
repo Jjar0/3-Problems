@@ -4,32 +4,28 @@ def entry():
     print ("\nPlease enter your password")
     password = input (">")
 
-    if len(password) > 16 or len(password) < 6:
-          print ("Your password must contain:")
-          print ("- Minimum of 6 characters")
-          print ("- Maximum of 16 characters")
-          entry()
+    if len(password) > 16:  
+        print("Password must be no more than 16 characters")
+
+    if len(password) < 6:
+        print ("Password must be a minimum of 6 characters")
 
     if not any (char.isdigit() for char in password):
-        print ("Your password must contain:")
-        print ("- At least 1 number")
-        entry()
+        print ("Password must contain at least 1 number")
+        
 
     if not any (char.isupper() for char in password):
-        print ("Your password must contain:")
-        print ("- At least 1 uppercase letter")
-        entry()
+        print ("Password must contain at least 1 uppercase letter")
+        
 
     if not any (char.islower() for char in password):
-        print ("Your password must contain:")
-        print ("- At least 1 lowercase letter") 
-        entry()
+        print ("Password must contain at least 1 lowercase letter") 
+        
 
     if not any (not char.isalnum() for char in password): #for loops to check for non-alphanumeric (special) characters in the string
-        print ("Your password must contain:")
-        print ("- At least 1 special character")
+        print ("Password must contain at least 1 special character")
+        
         entry()
-          
     else:
         print ("\nYour password is valid!")
         entry()
