@@ -37,10 +37,6 @@ def entry():
         print ("\nYour password is valid!")
         
     entry()
-    
-    
-
-
 
 print ("Welcome to the password creator.")
 print ("\nYour password must contain:")
