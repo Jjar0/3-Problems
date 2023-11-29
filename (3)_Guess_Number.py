@@ -39,6 +39,10 @@ def game(goal):
             print ("higher!")
             continue
 
+        if guess > 100 or guess < 0:
+            print("Please enter a number between 0-100")
+            continue
+
     answer = str(goal)
     attempts = str(counter)
 
