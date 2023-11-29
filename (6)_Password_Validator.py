@@ -29,7 +29,7 @@ def entry():
         valid = False
         
 
-    if not any (char.isalnum() for char in password): 
+    if not any (not char.isalnum() for char in password): 
         print ("Password must contain at least 1 special character")
         valid = False
 
