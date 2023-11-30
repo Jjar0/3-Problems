@@ -24,6 +24,8 @@ def game(goal):
         while True:
             try:
                 guess = int(input(">")) #input validation for digits.
+                if guess > 100 or guess < 1:
+                    raise
                 break
             except:
                 print ("please enter a number!")
@@ -38,10 +40,6 @@ def game(goal):
 
         if guess < goal:
             print ("higher!")
-            continue
-
-        if guess > 100 or guess < 0:
-            print("Please enter a number between 0-100")
             continue
 
     answer = str(goal)
