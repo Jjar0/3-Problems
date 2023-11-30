@@ -61,10 +61,8 @@ def convert(conversionRate,imperial,metric): #function is used to loop converter
     inp = float(inp)
     out = (inp * conversionRate) #calculation 
     
-    inp = str(inp)
-    out = str(out)
     #imperial/metric strings are used so output message defines which numbers are which measurements
-    print (inp + " " + imperial + " is " + out + " in " + metric + ".")
+    print (str(inp) + " " + imperial + " is " + "%.2f" % out + " in " + metric + ".")
     convert(conversionRate,imperial,metric)  
 
 print ("Welcome to the imperial to metric unit converter!")
