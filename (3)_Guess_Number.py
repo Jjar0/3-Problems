@@ -23,10 +23,11 @@ def game(goal):
 
         while True:
             try:
-                guess = int(input(">")) #inpout validation for digits.
+                guess = int(input(">")) #input validation for digits.
                 break
             except:
                 print ("please enter a number!")
+                counter = counter-1
                 continue
         
         guess = int(guess)
