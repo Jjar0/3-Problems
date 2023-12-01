@@ -6,7 +6,8 @@ def entry():
 
     valid = True
 
-    if len(password) > 16:  #series of if statements which check validation, if any fail, function is looped.
+    #series of if statements which check validation, if any fail, function is looped.
+    if len(password) > 16:  
         print("Password must be no more than 16 characters") #User is informed of which requirement(s) failed.
         valid = False
 
@@ -14,7 +15,8 @@ def entry():
         print ("Password must be a minimum of 6 characters")
         valid = False
 
-    if not any (char.isdigit() for char in password): #'any' function check for requirements,for loop checks characters in string.
+    #'any' function check for requirements,for loop checks characters in string.
+    if not any (char.isdigit() for char in password): 
         print ("Password must contain at least 1 number") 
         valid = False
         
