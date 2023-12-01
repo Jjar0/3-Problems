@@ -13,9 +13,9 @@ def menu():
     imperial = ""
     metric = ""
 
-    if menuSelection == "1":
-        conversionRate = 1.6 #conversion rate and measurements are stored in variables for later use. 
-        imperial = "miles"  #when condition is true, values are assigned to variables and cvarried through to convert function
+    if menuSelection == "1":#when condition is true, values are assigned to variables.
+        conversionRate = 1.6 
+        imperial = "miles"  
         metric = "kilometers"
         convert(conversionRate,imperial,metric)
         
@@ -36,17 +36,20 @@ def menu():
         imperial = "inches"
         metric = "centimeters"
         convert(conversionRate,imperial,metric)
-        
+
+    #basic validation to check for invalid code.   
     else:
-        print ("Please enter one of the numbers listed above") #basic validation to check for invalid code.
+        print ("Please enter one of the numbers listed above") 
         menu()
     
 def convert(conversionRate,imperial,metric): #function is used to loop converter.
 
-    conversionRate = float(conversionRate) #data stype casting so that conversion rates can be operated in maths.
-    
+    #data stype casting so that conversion rates can be operated in maths.
+    conversionRate = float(conversionRate) 
+
+    #tells user to input the data in thier chosen imperial unit via variable.
     print ("enter 0 to exit to the menu")
-    print ("Please enter a value in " + imperial) #tells user to input the data in thier chosen imperial unit via variable.
+    print ("Please enter a value in " + imperial) 
     inp = input (">")
 
     if inp == "0": #exit condition to return to menu at any time.
@@ -62,7 +65,8 @@ def convert(conversionRate,imperial,metric): #function is used to loop converter
     out = (inp * conversionRate) #calculation conversion to find metric value.
     
     #imperial/metric strings are used so output message defines which numbers are which measurements
-    print (str(inp) + " " + imperial + " is " + "%.2f" % out + " in " + metric + ".") #[REVISION] string formatting keeps outputted values to 2 decimal places for easier readability.
+    #[REVISION] string formatting keeps outputted values to 2 decimal places for easier readability.
+    print (str(inp) + " " + imperial + " is " + "%.2f" % out + " in " + metric + ".") 
     convert(conversionRate,imperial,metric)  
 
 print ("Welcome to the imperial to metric unit converter!")
