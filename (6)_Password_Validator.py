@@ -24,7 +24,7 @@ def entry():
         valid = False
         
 
-    if not any (char.islower() for char in password):
+    if not any (not char.islower() for char in password): #[REVISION] Fixed special character validation loop.
         print ("Password must contain at least 1 lowercase letter") 
         valid = False
         
