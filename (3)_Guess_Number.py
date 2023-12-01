@@ -28,7 +28,7 @@ def game(goal):
                     raise
                 break
             except:
-                print ("please enter a number!")
+                print ("please enter a number between 1 and 100")
                 counter-1
                 continue
         
